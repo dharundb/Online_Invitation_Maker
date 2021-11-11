@@ -40,16 +40,13 @@ We hope you would like our work!
 
 ## Tools Used
 #### IDEs Used
-
 ![Logo](https://surveymonkey-assets.s3.amazonaws.com/survey/290106376/1176d9f5-b9e8-4e70-9c53-e7373809ba8b.png)
 
 #### Front-End
 ![Logo](https://p92.com/binaries/content/gallery/p92website/technologies/htmlcssjs-overview.png)
 
 #### Back-End
-
 ![Logo](https://hackr.io/tutorials/learn-django/logo/logo-django?ver=1610114943)
-
 
 ## Deployment
 
