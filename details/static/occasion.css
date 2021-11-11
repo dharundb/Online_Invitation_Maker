@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: "Roboto";
+}
+
+body {
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+}
+
+h1 {
+  left: 39%;
+  top: 7%;
+  margin: 0.3%;
+  padding: 0.4%;
+  padding-left: 2%;
+  padding-right: 2%;
+  font-weight: normal;
+  position: absolute;
+  text-align: center;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+#wed {
+  height: 400px;
+  width: 400px;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+#fest {
+  height: 400px;
+  width: 400px;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+#bday {
+  height: 400px;
+  width: 400px;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+.img {
+  min-width: 1024px;
+  top: 0;
+  left: 0;
+}
+
+.card1 {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 25%;
+  left: 8%;
+}
+
+.card2 {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 25%;
+  left: 36.5%;
+}
+
+.card3 {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 25%;
+  left: 65%;
+}
+
+#wed:hover {
+  transform: scale(1.025);
+}
+
+#fest:hover {
+  transform: scale(1.025);
+}
+
+#bday:hover {
+  transform: scale(1.025);
+}

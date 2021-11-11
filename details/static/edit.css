@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Italianno&family=Merienda&family=Parisienne&family=Playfair+Display&family=Playfair+Display+SC&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: "Roboto";
+}
+
+.operation-btn {
+  background: transparent;
+  width: 200px;
+  padding: 1em;
+  display: inline-block;
+  margin-bottom: 2em;
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5000px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+  color: black;
+  font-weight: 500;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  background: linear-gradient(
+    110.5deg,
+    rgba(248, 196, 249, 0.66) 22.8%,
+    rgba(253, 122, 4, 0.15) 64.6%
+  );
+}
+
+.img-container {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 41%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.file-upload-section,
+.title {
+  margin: auto;
+  text-align: center;
+  margin-top: 5%;
+  background: transparent;
+  width: 200px;
+  padding: 1em;
+  margin-bottom: 2em;
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5000px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+  color: black;
+  font-weight: 500;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+#foto-file {
+  display: none;
+}
+
+.image {
+  margin-left: 31.5%;
+}
+.title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.buttons-section {
+  position: fixed;
+  margin: auto;
+  top: 67%;
+  left: 25%;
+  color: white;
+  width: 50%;
+}
+
+.buttons-table {
+  width: 100%;
+}
+
+.buttons-table td {
+  padding: 3px;
+  text-align: center;
+}
+
+.image {
+  width: 600px;
+  height: 600px;
+}
+
+a {
+  text-decoration: none;
+}

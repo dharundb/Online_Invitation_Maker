@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="{% static 'credw.css' %}">
+<title>Wedding details</title>
+</head>
+<body>
+    <img>
+    <h1>Please enter the wedding details</h1>
+<div>
+    <form class="card" method="post">
+        {% csrf_token %}
+        <p>Credentials</p><br/>
+        {% for message in messages %}
+            <h4>{{message}}</h4>
+        {% endfor %}
+        <br>
+        <input type="text" name="Occasion" placeholder="Wedding" value='Wedding' disabled><br>
+        <input type="text" name="Groom" placeholder="Groom"><br>
+        <input type="text" name="Bride" placeholder="Bride"><br>
+        <input type="text" name="Address" placeholder="Venue"><br>
+        <input type="tel" name="Contact" pattern='[0-9]{10}' placeholder="RSVP"><br>
+        <input type="date" name="Date" placeholder="dd-mm-yyyy"><br>
+        <input type="time" id="appt" name="Time" placeholder="Time"><br>
+        <input type="submit" value="submit" class="sub"><br>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'credb.css' %}">
+    <title>Birthday</title>
+</head>
+<body>
+    <img>
+    <div>
+        <h1>Please enter the Birthday details</h1>
+    </div>
+    <div>
+        <form class="card" method="post">
+            {% csrf_token %}
+            <p>Credentials</p><br/>
+            {% for message in messages %}
+                <h4>{{message}}</h4>
+            {% endfor %}
+            <br>
+            <input type="text" name="Occasion" placeholder="Birthday" value='Birthday' disabled><br>
+            <input type="text" name="Name" placeholder="Name"><br>
+            <input type="text" name="Address" placeholder="Venue"><br>
+            <input type="tel" name="Contact" pattern='[0-9]{10}' placeholder="RSVP"><br>
+            <input type="date" name="Date"><br>
+            <input type="time" id="appt" name="Time" placeholder="Time"><br>
+            <input type="number" name="Age" placeholder="Age" min="1" max="130"><br>
+            <input type="submit" value="submit" class="sub"><br/>
+        </form>
+    </div>
+</body>
+</html>

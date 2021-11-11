@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: "Roboto";
+}
+
+h1 {
+  height: 4%;
+  width: 42.5%;
+  left: 30%;
+  top: 5%;
+  margin: 0.3%;
+  padding-top: 0.5%;
+  padding-bottom: 0.75%;
+  padding-left: 1.5%;
+  padding-right: 2%;
+  font-weight: normal;
+  position: absolute;
+  text-align: center;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 30px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+body {
+  background-color: #fbda61;
+  background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
+  background-size: cover;
+}
+
+p {
+  text-align: center;
+  font-size: 30px;
+  padding-top: 4%;
+}
+
+h4 {
+  text-align: center;
+  opacity: 0.8;
+}
+
+a {
+  font-size: 30px;
+  text-decoration: none;
+}
+
+input {
+  background-color: #ffe9ec;
+}
+
+select {
+  background-color: #ffe9ec;
+}
+
+label {
+  font-size: 30px;
+}
+
+.card {
+  width: 500px;
+  height: 102%;
+  position: absolute;
+  top: 21%;
+  left: 37.5%;
+  margin-bottom: 10%;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+input {
+  width: 230px;
+  padding: 1em;
+  padding-left: 5%;
+  margin-left: 9em;
+  margin-bottom: 2em;
+  border: none;
+  background-color: white;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+  color: black;
+  font-weight: 500;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5000px;
+}
+
+input:hover {
+  background-color: rgb(220, 239, 252);
+}
+
+.sub {
+  margin-top: 0.2em;
+  margin-left: 10em;
+  padding-left: 15px;
+  padding-top: 6px;
+  padding-bottom: 7px;
+  width: 110px;
+  overflow: hidden;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  opacity: 1.2;
+}
+
+.sub:hover {
+  background-color: plum;
+}
+
+::placeholder {
+  font-weight: 400;
+  color: black;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  opacity: 0.7;
+}
+
+.log {
+  color: black;
+  font-size: 20px;
+  padding-right: 25px;
+  float: right;
+}
+
+.log:hover {
+  text-decoration: underline;
+}
+
+.extra {
+  content: "";
+  padding-bottom: 10%;
+}

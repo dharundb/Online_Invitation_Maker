@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mail sending</title>
+    <link rel="stylesheet" href="{% static 'mailshare.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <img>
+<form method="POST"> 
+    {% csrf_token %}
+    <h1>Send mail</h1><br/>
+    {% for message in messages %}
+    <h4>{{message}}</h4>
+    {% endfor %}
+    <br/>
+    <label></label><input style="font-family:Arial, FontAwesome" type='email' name='email' id='mail' placeholder="&#xf0e0;  e-mail">
+    <textarea name="subject" rows="1" cols="50" id='subject' placeholder="Subject"></textarea>
+    <textarea name="txt" rows="4" cols="50" placeholder="Input your text here" id="main"></textarea>
+    <!--<textarea name="location" rows="1" cols="50" placeholder="Location"></textarea>-->
+    <input type="submit" value='Send mail' class='half'>
+    <div><a href="logout" class='line'>Logout</a></div>
+
+</form>
+<div class="drops">
+    <div class="drops drop1"></div>
+    <div class="drops drop2"></div>
+    <div class="drops drop3"></div>
+</div>
+</body>
+</html>

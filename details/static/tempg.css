@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Italianno&family=Merienda&family=Parisienne&family=Playfair+Display&family=Playfair+Display+SC&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: "Roboto";
+}
+
+body {
+  background-image: linear-gradient(
+    68.4deg,
+    rgba(248, 182, 204, 1) 0.5%,
+    rgba(192, 198, 230, 1) 49%,
+    rgba(225, 246, 240, 1) 99.8%
+  );
+}
+
+h1 {
+  left: 39%;
+  top: 7%;
+  margin: 0.3%;
+  padding: 0.4%;
+  padding-left: 2%;
+  padding-right: 2%;
+  font-weight: normal;
+  position: absolute;
+  text-align: center;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.imgs {
+  height: 400px;
+  width: 400px;
+  margin: 15px;
+  transition: transform 0.2s;
+}
+
+.card {
+  margin-top: 11%;
+  margin-left: 3%;
+}
+
+.imgs:hover {
+  transform: scale(1.025);
+}
+
+[type="radio"] {
+  visibility: hidden;
+}
+
+[type="radio"]:checked + label {
+  transform: scale(1.05);
+  border-radius: 20%;
+}
+
+#next {
+  height: 50px;
+  background: transparent;
+  border: none;
+  font-size: 50px;
+  margin-left: 10%;
+  margin-right: 15px;
+  color: blue;
+  font-family: "Italianno", cursive;
+  float: right;
+}
+
+#next:hover {
+  text-decoration: underline;
+}

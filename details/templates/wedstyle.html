@@ -1,0 +1,830 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title>Wedding Styling</title>
+
+    <link href="{% static 'wedstyle.css' %}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css"/>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <ul class="navbar-nav">
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Groom & Bride
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li>
+                    <a class="dropdown-item" href="#">Font family</a>
+                    <ul class="dropdown-menu dropdown-submenu" >
+                        <li>
+                            <button class="dropdown-item" id="s1" onclick="st(id)" value="Parisienne"><label id="parisien" style="font-size: 25px;" >Parisienne</label></button>
+                        </li>
+                        <hr class="dropdown-divider" />
+                        <li>
+                            <button class="dropdown-item" id="s2" onclick="st(id)" value="Playfair Display"><label id="playfair" style="font-size: 20px;" >Playfair-Display</label></button>
+                        </li>
+                        <hr class="dropdown-divider" />
+                        <li>
+                            <button class="dropdown-item" id="s3" onclick="st(id)" value="Cinzel Decorative"><label id="cinzel" style="font-size: 20px;" >Cinzel-Decorative</label></button>
+                        </li>
+                        <hr class="dropdown-divider" />
+                        <li>
+                            <button class="dropdown-item" id="s4" onclick="st(id)" value="Italianno"><label id="italy" style="font-size: 30px;">Italianno</label></button>
+                        </li>
+                        <hr class="dropdown-divider" />
+                        <li>
+                            <button class="dropdown-item" id="s5" onclick="st(id)" value="Merienda"><label id="merienda" style="font-size: 20px;" >Merienda</label></button>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">Font Size</a>
+                    <ul class="dropdown-menu dropdown-submenu" >
+                        <li>
+                            <button class="dropdown-item" onclick="increase1('draggable-element1')">Size Increase</button>
+                        </li>
+                        <hr class="dropdown-divider" />
+                        <li>
+                            <button class="dropdown-item" onclick="decrease1('draggable-element1')">Size Decrease</button>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">Font Style</a>
+                    <ul class="dropdown-menu dropdown-submenu" >
+                        <li>
+                            <button class="dropdown-item" onclick="c('bold')">Bold</button>
+                        </li>
+                        <hr class="dropdown-divider" />
+                        <li>
+                            <button class="dropdown-item" onclick="c('italic')">Italic</button>
+                        </li>
+                        <hr class="dropdown-divider" />
+                        <li>
+                            <button class="dropdown-item" onclick="c('normal')">Normal</button>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">color</a>
+                    <ul class="dropdown-menu dropdown-submenu" >
+                        <li>
+                            <input type="color" class="color" id="color1" onclick="change1('draggable-element1',id)" style="margin-left:30%">
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                RSVP
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li>
+                    <a class="dropdown-item" href="#">Font family</a>
+                    <ul class="dropdown-menu dropdown-submenu" >
+                        <li>
+                            <button class="dropdown-item" id="s1" onclick="st1(id)" value="Parisienne"><label id="parisien" style="font-size: 25px;" >Parisienne</label></button>
+                        </li>
+                        <hr class="dropdown-divider" />
+                        <li>
+                            <button class="dropdown-item" id="s2" onclick="st1(id)" value="Playfair Display"><label id="playfair" style="font-size: 20px;" >Playfair-Display</label></button>
+                        </li>
+                        <hr class="dropdown-divider" />
+                        <li>
+                            <button class="dropdown-item" id="s3" onclick="st1(id)" value="Cinzel Decorative"><label id="cinzel" style="font-size: 20px;" >Cinzel-Decorative</label></button>
+                        </li>
+                        <hr class="dropdown-divider" />
+                        <li>
+                            <button class="dropdown-item" id="s4" onclick="st1(id)" value="Italianno"><label id="italy" style="font-size: 30px;">Italianno</label></button>
+                        </li>
+                        <hr class="dropdown-divider" />
+                        <li>
+                            <button class="dropdown-item" id="s5" onclick="st1(id)" value="Merienda"><label id="merienda" style="font-size: 20px;" >Merienda</label></button>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">Font Size</a>
+                    <ul class="dropdown-menu dropdown-submenu" >
+                        <li>
+                            <button class="dropdown-item" onclick="increase('draggable-element2','draggable-element3')">Size Increase</button>
+                        </li>
+                        <hr class="dropdown-divider" />
+                        <li>
+                            <button class="dropdown-item" onclick="decrease('draggable-element2','draggable-element3')">Size Decrease</button>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">color</a>
+                    <ul class="dropdown-menu dropdown-submenu" >
+                        <li>
+                            <input type="color" class="color" id="color2" onclick="change('draggable-element2','draggable-element3',id)" style="margin-left:30%">
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+              Quotes
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <button class="dropdown-item" id="q1" onclick="ch(id)" value="A wedding of lifetime" >A wedding of lifetime</button>
+                <hr class="dropdown-divider" />
+                <button class="dropdown-item" id="q2" onclick="ch(id)" value="We are finally tying the knot">We are finally tying the knot</button>
+                <hr class="dropdown-divider" />
+                <button class="dropdown-item" id="q3" onclick="ch(id)" value="Together with their families">Together with their families</button>
+                <hr class="dropdown-divider" />
+                <button class="dropdown-item" id="q4" onclick="ch(id)" value="A tale of two lovers">A tale of two lovers</button>
+                <hr class="dropdown-divider" />
+                <button class="dropdown-item" id="q5" onclick="ch(id)" value="As the leaves fall, let's celebrate">As the leaves fall, let's celebrate</button>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Quotes Styling
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li>
+                    <a class="dropdown-item" href="#">Font family</a>
+                    <ul class="dropdown-menu dropdown-submenu" >
+                        <li>
+                            <button class="dropdown-item" id="s1" onclick="st2(id)" value="Parisienne"><label id="parisien" style="font-size: 25px;" >Parisienne</label></button>
+                        </li>
+                        <hr class="dropdown-divider" />
+                        <li>
+                            <button class="dropdown-item" id="s2" onclick="st2(id)" value="Playfair Display"><label id="playfair" style="font-size: 20px;" >Playfair-Display</label></button>
+                        </li>
+                        <hr class="dropdown-divider" />
+                        <li>
+                            <button class="dropdown-item" id="s3" onclick="st2(id)" value="Cinzel Decorative"><label id="cinzel" style="font-size: 20px;" >Cinzel-Decorative</label></button>
+                        </li>
+                        <hr class="dropdown-divider" />
+                        <li>
+                            <button class="dropdown-item" id="s4" onclick="st2(id)" value="Italianno"><label id="italy" style="font-size: 30px;">Italianno</label></button>
+                        </li>
+                        <hr class="dropdown-divider" />
+                        <li>
+                            <button class="dropdown-item" id="s5" onclick="st2(id)" value="Merienda"><label id="merienda" style="font-size: 20px;" >Merienda</label></button>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">Font Size</a>
+                    <ul class="dropdown-menu dropdown-submenu" >
+                        <li>
+                            <button class="dropdown-item" onclick="increase1('draggable-element6')">Size Increase</button>
+                        </li>
+                        <hr class="dropdown-divider" />
+                        <li>
+                            <button class="dropdown-item" onclick="decrease1('draggable-element6')">Size Decrease</button>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">color</a>
+                    <ul class="dropdown-menu dropdown-submenu" >
+                        <li>
+                            <input type="color" class="color" id="color3" onclick="change1('draggable-element6',id)" style="margin-left:30%">
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Date & Time
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li>
+                    <a class="dropdown-item" href="#">Font family</a>
+                    <ul class="dropdown-menu dropdown-submenu" >
+                        <li>
+                            <button class="dropdown-item" id="s1" onclick="st3(id)" value="Parisienne"><label id="parisien" style="font-size: 25px;" >Parisienne</label></button>
+                        </li>
+                        <hr class="dropdown-divider" />
+                        <li>
+                            <button class="dropdown-item" id="s2" onclick="st3(id)" value="Playfair Display"><label id="playfair" style="font-size: 20px;" >Playfair-Display</label></button>
+                        </li>
+                        <hr class="dropdown-divider" />
+                        <li>
+                            <button class="dropdown-item" id="s3" onclick="st3(id)" value="Cinzel Decorative"><label id="cinzel" style="font-size: 20px;" >Cinzel-Decorative</label></button>
+                        </li>
+                        <hr class="dropdown-divider" />
+                        <li>
+                            <button class="dropdown-item" id="s4" onclick="st3(id)" value="Italianno"><label id="italy" style="font-size: 30px;">Italianno</label></button>
+                        </li>
+                        <hr class="dropdown-divider" />
+                        <li>
+                            <button class="dropdown-item" id="s5" onclick="st3(id)" value="Merienda"><label id="merienda" style="font-size: 20px;" >Merienda</label></button>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">Font Size</a>
+                    <ul class="dropdown-menu dropdown-submenu" >
+                        <li>
+                            <button class="dropdown-item" onclick="increase('draggable-element4','draggable-element5')">Size Increase</button>
+                        </li>
+                        <hr class="dropdown-divider" />
+                        <li>
+                            <button class="dropdown-item" onclick="decrease('draggable-element4','draggable-element5')">Size Decrease</button>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">color</a>
+                    <ul class="dropdown-menu dropdown-submenu" >
+                        <li>
+                            <input type="color" class="color" id="color4" onclick="change('draggable-element4','draggable-element5',id)" style="margin-left:30%">
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="edit">Wanna edit the template?</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="d-flex align-items-center">
+            <a class="btn btn-outline-success my-2 my-sm-0" href="logout">Logout</a>
+        </div>
+    </nav>
+
+<!--========================== Main content ====================================================================================================-->
+
+<div>
+    <input type="file" id="inpfile" accept="image/*" value="change template" contents="change template">
+</div>
+
+<div id="image-preview" style="margin-left: 30%;">
+    <div class="flex">
+        <img src="{{images.pic.url}}" alt="None" id="my_image"> 
+    </div>
+    <div>
+        <div id="draggable-element1" style="color: rgb(0, 0, 0); font-size: 30px; left: 80px; top: 131px;">{{wcred.groom}} and {{wcred.bride}}</div>
+        <div id="draggable-element2" style="color: rgb(0, 0, 0); font-size: 30px; left: 71px; top: 458px;">RSVP {{wcred.contact}}</div>
+        <div id="draggable-element3" style="color: rgb(0, 0, 0); font-size: 30px; left: 98px; top: 287px;">{{wcred.address}}</div>
+        <div id="draggable-element4" style="color: rgb(0, 0, 0); font-size: 30px; left: 96px; top: 538px;">{{wcred.date}}</div>
+        <div id="draggable-element5" style="color: rgb(0, 0, 0); font-size: 30px; left: 54px; top: 202px;">{{wcred.time}}</div>
+        <div id="draggable-element6" style="color: rgb(0, 0, 0); font-size: 30px; left: 31px; top: 379px;">Save the date</div>
+    </div>
+</div>
+
+<div class="container" style="justify-content: flex-end;">
+    <a style="font-family:Arial, FontAwesome; float:right;" class="options" href="mailshare">&#xf14d; through mail</a>
+    <input style="font-family:Arial, FontAwesome; float:right;" type="button" class="opt" onclick="download()" value="Download &#xf019;">
+</div>
+
+<script>
+
+//<!--==============================================================================================================================-->
+
+var selected = null, // Object of the element to be moved
+x_pos = 0, y_pos = 0, // Stores x & y coordinates of the mouse pointer
+x_elem = 0, y_elem = 0; // Stores top, left values (edge) of the element
+
+// Will be called when user starts dragging an element
+function _drag_init(elem) {
+    // Store the object of the element which needs to be moved
+    selected = elem;
+    x_elem = x_pos - selected.offsetLeft;
+    y_elem = y_pos - selected.offsetTop;
+}
+
+// Will be called when user dragging an element
+function _move_elem(e) {
+    x_pos = document.all ? window.event.clientX : e.pageX;
+    y_pos = document.all ? window.event.clientY : e.pageY;
+    if (selected !== null) {
+        selected.style.left = (x_pos - x_elem) + 'px';
+        selected.style.top = (y_pos - y_elem) + 'px';
+    }
+}
+
+// Destroy the object when we are done
+function _destroy() {
+    selected = null;
+}
+
+// Bind the functions...
+document.getElementById('draggable-element1').onmousedown = function () {
+    _drag_init(this);
+    return false;
+};
+document.getElementById('draggable-element2').onmousedown = function () {
+    _drag_init(this);
+    return false;
+};
+document.getElementById('draggable-element3').onmousedown = function () {
+    _drag_init(this);
+    return false;
+};
+document.getElementById('draggable-element4').onmousedown = function () {
+    _drag_init(this);
+    return false;
+};
+document.getElementById('draggable-element5').onmousedown = function () {
+    _drag_init(this);
+    return false;
+};
+document.getElementById('draggable-element6').onmousedown = function () {
+    _drag_init(this);
+    return true;
+};
+
+document.onmousemove = _move_elem;
+document.onmouseup = _destroy;
+
+function ch(id){
+  document.getElementById("draggable-element6").innerHTML =document.getElementById(id).value;
+}
+
+function change1(el,id){
+  document.getElementById(el).style.color = document.getElementById(id).value;
+}
+function change(el,el1,id){
+  document.getElementById(el).style.color = document.getElementById(id).value;
+  document.getElementById(el1).style.color = document.getElementById(id).value;
+}
+
+function st(id){
+  document.getElementById("draggable-element1").style.fontFamily = document.getElementById(id).value;
+}
+
+function st1(id){
+  document.getElementById("draggable-element2").style.fontFamily = document.getElementById(id).value;
+  document.getElementById("draggable-element3").style.fontFamily = document.getElementById(id).value;
+}
+
+function st2(id){
+  document.getElementById("draggable-element6").style.fontFamily = document.getElementById(id).value;
+}
+
+function st3(id){
+  document.getElementById("draggable-element4").style.fontFamily = document.getElementById(id).value;
+  document.getElementById("draggable-element5").style.fontFamily = document.getElementById(id).value;
+}
+
+function increase1(el)
+{
+	var para1 = document.getElementById(el);
+	var currentFont1 = para1.style.fontSize.replace("px", "");
+	var size_change1 = (parseInt(currentFont1) + 5)+ "px";
+	if(size_change1<"70px"){
+		para1.style.fontSize = size_change1;
+		fo_size = size_change1;
+	}
+	else{
+		alert("Max size reached");
+	}
+}
+function increase(el,el1)
+{
+	var para1 = document.getElementById(el);
+	var para2 = document.getElementById(el1);
+	var currentFont1 = para1.style.fontSize.replace("px", "");
+	var currentFont2 = para2.style.fontSize.replace("px", "");
+	var size_change1 = (parseInt(currentFont1) + 5)+ "px";
+	var size_change2 = (parseInt(currentFont2) + 5)+ "px";
+	if(size_change1<"70px" || size_change2<"70px"){
+		para1.style.fontSize = size_change1;
+		para2.style.fontSize = size_change2;
+	}
+	else{
+		alert("Max size reached");
+	}
+}
+
+
+function decrease1(el)
+{
+	var para1 = document.getElementById(el);
+	var currentFont1 = para1.style.fontSize.replace("px", "");
+	var size_change1 = (parseInt(currentFont1) - 5)+ "px";
+	if(size_change1>"20px" ){
+		para1.style.fontSize = size_change1;
+	}
+	else{
+		alert("Min size reached");
+	}
+}
+function decrease(el,el1)
+{
+	var para1 = document.getElementById(el);
+	var para2 = document.getElementById(el1);
+	var currentFont1 = para1.style.fontSize.replace("px", "");
+	var currentFont2 = para2.style.fontSize.replace("px", "");
+	var size_change1 = (parseInt(currentFont1) - 5)+ "px";
+	var size_change2 = (parseInt(currentFont2) - 5)+ "px";
+	if(size_change1>"20px" || size_change2>"20px"){
+		para1.style.fontSize = size_change1;
+		para2.style.fontSize = size_change2;
+	}
+	else{
+		alert("Max size reached");
+	}
+}
+function c(id){
+	var wt = document.getElementById("draggable-element1");
+	var ip = id
+
+	if(ip == 'bold'){
+		wt.style.fontWeight=ip;
+	}
+	else{
+		wt.style.fontStyle=ip;
+	}
+}
+	
+
+
+const inpfile = document.getElementById("inpfile");
+const image = document.querySelector("img")
+const image_preview = document.getElementById("image-preview");
+
+inpfile.addEventListener("change", function(){
+  const files = inpfile.files[0];
+
+  if(files){
+	  const fileReader = new FileReader();
+	  fileReader.readAsDataURL(files);
+	  fileReader.addEventListener("load", function () {
+            if (this.width > 600 || this.height > 600) {
+                            alert('Please select a small image. The image width and height should be 600x600');
+
+                            document.getElementById('theText').style.display = 'none';
+                            document.getElementById('bt').style.display = 'none';
+                            document.getElementById('textArea').style.display = 'none';
+                            document.getElementById('myimage').src = '';
+            }
+            else{
+                console.log(this);
+                image.src = this.result;
+            }
+		  //image_preview.innerHTML = '<img src="' + this.result + '" + class = "inpimage" />';
+	  }); 
+  }
+});
+
+	
+//<!--==============================================================================================================================-->
+
+
+
+let download = () => {
+	textContainer1 = document.getElementById('draggable-element1');
+    textContainer2 = document.getElementById('draggable-element2');
+    textContainer3 = document.getElementById('draggable-element3');
+    textContainer4 = document.getElementById('draggable-element4');
+    textContainer5 = document.getElementById('draggable-element5');
+    textContainer6 = document.getElementById('draggable-element6');
+	let img = new Image();
+	img.src = document.getElementById('my_image').src;
+	let canvas = document.createElement("canvas");
+
+	img.onload = function(){
+		drawImage();
+        downloadImage(img.src.replace(/^.*[\\\/]/, ''));
+	}
+
+	let drawImage = () => {
+		let ctx = canvas.getContext("2d");
+		canvas.width = img.width;
+		canvas.height = img.height;
+
+		ctx.drawImage(img, 0, 0);
+		
+		textContainer1.style.border = 0;
+        textContainer2.style.border = 0;
+        textContainer3.style.border = 0;
+        textContainer4.style.border = 0;
+        textContainer5.style.border = 0;
+        textContainer6.style.border = 0;
+		
+		let left1 = parseInt(window.getComputedStyle(textContainer1).left);
+		let top1 = parseInt(window.getComputedStyle(textContainer1).top, 0);
+		let txtAlign1 = window.getComputedStyle(textContainer1).textAlign;
+		let color1 = window.getComputedStyle(textContainer1).color;
+		let fnt1 = window.getComputedStyle(textContainer1).font;
+        ctx.font = fnt1;
+		ctx.fillStyle = color1;
+		ctx.textAlign = txtAlign1;
+        //console.log(txtAlign1);
+        var str1 =  document.getElementById("draggable-element1").innerHTML;
+        ctx.fillText(str1,left1-470,parseInt(top1-85));
+		
+        let left2 = parseInt(window.getComputedStyle(textContainer2).left);
+		let top2 = parseInt(window.getComputedStyle(textContainer2).top, 0);
+        let txtAlign2 = window.getComputedStyle(textContainer2).textAlign;
+		let color2 = window.getComputedStyle(textContainer2).color;
+		let fnt2 = window.getComputedStyle(textContainer2).font;
+        ctx.font = fnt2;
+		ctx.fillStyle = color2;
+		ctx.textAlign = txtAlign2;
+        //console.log(txtAlign2);
+		var str2 =  document.getElementById("draggable-element2").innerHTML;
+        ctx.fillText(str2,left2-470,top2-85);
+
+        let left3 = parseInt(window.getComputedStyle(textContainer3).left);
+		let top3 = parseInt(window.getComputedStyle(textContainer3).top, 0);
+		let txtAlign3 = window.getComputedStyle(textContainer3).textAlign;
+		let color3 = window.getComputedStyle(textContainer3).color;
+		let fnt3 = window.getComputedStyle(textContainer3).font;
+        ctx.font = fnt3;
+		ctx.fillStyle = color3;
+		ctx.textAlign = txtAlign3;
+        var str3 =  document.getElementById("draggable-element3").innerHTML;
+        ctx.fillText(str3,left3-470,top3-85);
+
+        let left4 = parseInt(window.getComputedStyle(textContainer4).left);
+		let top4 = parseInt(window.getComputedStyle(textContainer4).top, 0);
+		let txtAlign4 = window.getComputedStyle(textContainer4).textAlign;
+		let color4 = window.getComputedStyle(textContainer4).color;
+		let fnt4 = window.getComputedStyle(textContainer4).font;
+        ctx.font = fnt4;
+		ctx.fillStyle = color4;
+		ctx.textAlign = txtAlign4;
+        var str4 =  document.getElementById("draggable-element4").innerHTML;
+        ctx.fillText(str4,left4-470,top4-85);
+
+        let left5 = parseInt(window.getComputedStyle(textContainer5).left);
+		let top5 = parseInt(window.getComputedStyle(textContainer5).top, 0);
+		let txtAlign5 = window.getComputedStyle(textContainer5).textAlign;
+		let color5 = window.getComputedStyle(textContainer5).color;
+		let fnt5 = window.getComputedStyle(textContainer5).font;
+        ctx.font = fnt5;
+		ctx.fillStyle = color5;
+		ctx.textAlign = txtAlign5;
+        var str5 =  document.getElementById("draggable-element5").innerHTML;
+        ctx.fillText(str5,left5-470,top5-85);
+
+        let left6 = parseInt(window.getComputedStyle(textContainer6).left);
+		let top6 = parseInt(window.getComputedStyle(textContainer6).top, 0);
+		let txtAlign6 = window.getComputedStyle(textContainer6).textAlign;
+		let color6 = window.getComputedStyle(textContainer6).color;
+		let fnt6 = window.getComputedStyle(textContainer6).font;
+        ctx.font = fnt6;
+		ctx.fillStyle = color6;
+		ctx.textAlign = txtAlign6;
+        var str6 =  document.getElementById("draggable-element6").innerHTML;
+        ctx.fillText(str6,left6-470,top6-85);
+	}
+
+	let downloadImage = (img_name) => {
+		let a = document.createElement('a');
+		a.href = canvas.toDataURL("image/png");
+		a.download = 'SPD_Invitation.png';
+		document.body.appendChild(a);
+		a.click();        
+	}
+}
+
+</script>
+
+<!--==============================================================================================================================-->
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Italianno&family=Merienda&family=Parisienne&family=Playfair+Display&family=Playfair+Display+SC&display=swap");
+
+body {
+  background-image: linear-gradient(
+    110.5deg,
+    rgba(248, 196, 249, 0.66) 22.8%,
+    rgba(253, 122, 4, 0.15) 64.6%
+  );
+}
+
+.options{
+    margin-left: 1%;
+    width: 120px;
+    padding: 2px;
+    border: solid 1px rgb(10, 0, 0);
+    color: black;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.options:hover{
+    background: black;
+    color: white;
+}
+
+.opt{
+    width: 110px;
+    border: solid 1px rgb(10, 0, 0);
+    border-radius: 3px;
+    padding: 2px;
+    background: transparent;
+}
+
+.opt:hover{
+    background: black;
+    color: white;
+}
+
+input[type=file]::-webkit-file-upload-button{
+    background: transparent;
+    width: 100px;
+    border: solid 1px rgb(10, 0, 0);
+    border-radius: 3px;
+    padding: 2px;
+}
+ 
+input[type=file]::-webkit-file-upload-button:hover{
+    background: black;
+    color: white;
+}
+
+.dropdown-menu li {
+  position: relative;
+}
+
+.dropdown-menu .dropdown-submenu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: -7px;
+}
+
+.dropdown-menu .dropdown-submenu-left {
+  right: 100%;
+  left: auto;
+}
+
+.dropdown-menu > li:hover > .dropdown-submenu {
+  display: block;
+}
+
+#parisien {
+  font-family: "Parisienne", cursive;
+}
+
+#playfair {
+  font-family: "Playfair Display", serif;
+}
+
+#cinzel {
+  font-family: "Cinzel Decorative", cursive;
+}
+
+#italy {
+  font-family: "Italianno", cursive;
+}
+
+#merienda {
+  font-family: "Merienda", cursive;
+}
+
+.flex {
+  display: flex;
+}
+
+.head {
+  margin-left: 40%;
+  margin-right: 37%;
+}
+
+
+.image-preview {
+  margin-top: 10px;
+  background-color: rgba(255, 179, 189, 1) 1.8%;
+  border: 3px dashed gray;
+  height: 620px;
+  width: 620px;
+}
+
+.left {
+  margin-left: 50px;
+}
+
+p {
+  color: white;
+}
+
+#draggable-element1 {
+  left: 500px;
+  top: 130px;
+  font-family: "Italianno", cursive;
+  color: rgb(62, 12, 241);
+  font-size: 50px;
+  cursor: move;
+  position: absolute; 
+}
+
+#draggable-element2 {
+  left: 600px;
+  top: 130px;
+  color: rgb(51, 185, 179);
+  cursor: move;
+  position: absolute;
+}
+
+#draggable-element3 {
+  left: 750px;
+  top: 130px;
+  color: rgb(51, 185, 179);
+  cursor: move;
+  position: absolute;
+}
+
+#draggable-element4 {
+  left: 950px;
+  top: 130px;
+  color: rgb(51, 185, 179);
+  cursor: move;
+  position: absolute;
+}
+
+#draggable-element5 {
+  left: 950px;
+  top: 130px;
+  color: rgb(51, 185, 179);
+  cursor: move;
+  position: absolute;
+}
+
+#draggable-element6 {
+  left: 950px;
+  top: 130px;
+  color: rgb(51, 185, 179);
+  cursor: move;
+  position: absolute; 
+}
+#image-preview {
+  margin-top: 10px;
+  background-color: rgba(255, 179, 189, 1) 1.8%;
+  border: 3px dashed gray;
+  height: 626px;
+  width: 626px;
+}
+
+img {
+  /*width: 600px;
+  height: 600px;*/
+  margin: 10px;
+}
+
+.pdf{
+width: 80px;
+}
+</style>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+</body>
+</html>
