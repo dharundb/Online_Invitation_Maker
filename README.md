@@ -19,7 +19,7 @@ We hope you would like our work!
 - **Template choices** - Gets the template choice from user.
 - **Stylings** - Formatting options
 - **Download** - Creates a new Canvas object, writes the user's necessities in the image and lets you download the invitation.
-- **Share through mail** - Gets the receiver mail ID and sends the invitation.
+- **Share through mail** - Gets the receiver mail ID and sends the invitation. (Uses SMTP Library)
 - **Filter options** - Editing the invitation and lets you download it.
 
 
