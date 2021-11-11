@@ -1,0 +1,57 @@
+{% load static %}
+{% load icon %}
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="{% static '/welcome.css' %}">
+    </head>
+
+    <body>
+        {% csrf_token %}
+        <div class="header">
+            <div class="left">
+            <a href="" class="button button1">{% icon "home" height='26' width='26' %}</a>
+            </div>
+            <nav class="right">
+            <a href="signup" class="button button2">Sign-up</a>
+            <a href="login" class="button button3">Login</a>
+            <a href="http://127.0.0.1:8080/admin/" class="button button4">Admin</a>
+            </nav>
+        </div>
+        <div class="content">
+            <img src="/static/images/bg.jpeg" class="img" alt="back image" width="100%" height="645" >
+            <h1 class= "topic" >Perfect Invitation<br/>for any occasion</h1>
+        </div>
+        <div class="footer">
+            <div class="container" style="padding: 20px 0; overflow: hidden; text-align: center;">
+                <a href="#" class="logos">
+                    <i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+                </a>
+                <a href="#" class="logos">
+                    <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+                </a>
+                <a href="#" class="logos">
+                    <i class="fa fa-google-plus fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/surtik-s/" class="logos">
+                    <i class="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+                </a>
+                <a href="#" class="logos">
+                    <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+                </a>
+                <a href="#" class="logos">
+                    <i class="fa fa-pinterest fa-lg white-text"></i>
+                </a>
+            </div>
+            <p style="color: #567f85; overflow: hidden; text-align: center;" class="cr">
+                &copy; 2021 Copyright: Created By: Online Invitation maker
+            </p>
+        </div>
+    </body>
+</html>

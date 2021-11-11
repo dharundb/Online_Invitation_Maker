@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+    <link rel="stylesheet" href="{% static 'signup.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Signup</title>
+</head>
+
+<body>
+    <img>
+<form method="POST"> 
+    {% csrf_token %}
+    <h1>Sign up</h1><br/> 
+    {% for message in messages %}
+    <h4>{{message}}</h4> 
+    {% endfor %}
+    <br/>
+    <label></label><input style="font-family:Arial, FontAwesome" type='text' name='username' placeholder="&#xf007;  Username">
+    <label></label><input style="font-family:Arial, FontAwesome" type='email' name='email' placeholder="&#xf0e0;  e-mail">
+    <label></label><input style="font-family:Arial, FontAwesome" type='password' name='pwd1' placeholder="&#xf023;  Enter password">
+    <label></label><input style="font-family:Arial, FontAwesome" type='password' name='pwd2'  placeholder="&#xf023;  Re-enter password">
+    <input type="submit" value='Register' class='half'>
+</form>
+<div class="drops">
+    <div class="drops drop1"></div>
+    <div class="drops drop2"></div>
+    <div class="drops drop3"></div>
+</div>
+</body>
+</html>

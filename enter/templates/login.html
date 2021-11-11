@@ -1,0 +1,33 @@
+{% load static %}
+{% load icon %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body>
+<img>
+<form method="POST">
+    {% csrf_token %}
+    <h1>Login</h1><br/>
+    {% for message in messages %}
+    <h4>{{message}}</h4>
+    {% endfor %}
+    <br/>
+    <label></label><input style="font-family:Arial, FontAwesome" type='text' name='username' placeholder=" &#xf007;  Username">
+    <label></label><input style="font-family:Arial, FontAwesome"  type='password' name='password' placeholder=" &#xf023;  Password">
+    <input type="submit" value='Login' class='half'>
+    <div class='d'><label class='l'>Not a Member?  </label><a href="/signup" class='line'>Signup</a></div>
+</form>
+<div class="drops">
+    <div class="drops drop1"></div>
+    <div class="drops drop2"></div>
+    <div class="drops drop3"></div>
+</div>
+</body>
+</html>
